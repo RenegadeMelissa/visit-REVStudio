@@ -1,55 +1,64 @@
 {
-  "name": "gatsby-starter-landing-page",
-  "private": true,
+  "name": "gatsby-starter-contentful-homepage",
+  "version": "1.0.0",
   "engines": {
     "node": ">=18.0.0"
   },
-  "workspaces": [
-    ".",
-    "gatsby-theme-landing-page"
-  ],
-  "version": "1.0.0",
-  "description": "Gatsby landing page starter built with Contentful",
   "scripts": {
     "start": "gatsby develop",
-    "start:refresh": "ENABLE_GATSBY_REFRESH_ENDPOINT=true yarn start",
-    "refresh": "curl -X POST http://localhost:8000/__refresh",
-    "setup": "node .contentful/setup.js",
-    "gatsby-provision": "gatsby-provision-contentful --contentful-data-path='./.contentful/landing-page-model-and-content.json'",
+    "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "gatsby-provision": "gatsby-provision-contentful --contentful-data-path='./scripts/data.json' --space-id=$CONTENTFUL_SPACE_ID --management-token=$CONTENTFUL_MANAGEMENT_TOKEN",
+    "setup": "node ./scripts/setup.js",
+    "export-content": "contentful space export --space-id=$SPACE_ID --management-token=$MANAGEMENT_TOKEN --export-dir=scripts --content-file=data.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-landing-page.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-landing-page/issues"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-landing-page#readme",
   "dependencies": {
-    "@fontsource/inter": "^4.5.1",
+    "@contentful/rich-text-html-renderer": "^15.11.1",
+    "@fontsource/dm-mono": "^4.5.9",
+    "@fontsource/dm-sans": "^4.5.8",
+    "@formspree/react": "^2.4.4",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@vanilla-extract/babel-plugin": "^1.2.0",
+    "@vanilla-extract/css": "^1.9.0",
+    "@vanilla-extract/css-utils": "^0.1.2",
+    "@vanilla-extract/webpack-plugin": "^2.1.12",
+    "clsx": "^1.2.1",
+    "framer-motion": "^10.12.17",
     "gatsby": "^5.0.0",
+    "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-segment-js": "^5.0.0",
+    "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-plugin-vanilla-extract": "^4.0.1",
     "gatsby-source-contentful": "^8.0.0",
-    "gatsby-theme-landing-page": "1.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-sharp": "^5.0.0",
+    "is-absolute-url": "^4.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-feather": "^2.0.9",
+    "sharp": "^0.30.5",
+    "use-debounce": "^9.0.4"
   },
   "devDependencies": {
-    "chalk": "^4.0.0",
-    "contentful-import": "^8.5.21",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "chalk": "4",
+    "contentful-cli": "^1.15.3",
+    "contentful-import": "^8.3.2",
+    "gatsby-plugin-postcss": "^6.11.0",
     "gatsby-provision-contentful": "^0.0.5",
-    "husky": ">=6",
     "inquirer": "^8.2.0",
-    "lint-staged": ">=10",
-    "prettier": "^2.5.0"
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "lint-staged": "^12.3.5",
+    "postcss": "^8.4.24",
+    "prettier": "2.5.1",
+    "tailwindcss": "^3.3.2",
+    "yargs-parser": "^21.0.0"
   }
 }
