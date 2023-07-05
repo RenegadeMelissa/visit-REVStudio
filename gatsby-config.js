@@ -22,8 +22,9 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
-    "gatsby-plugin-sharp",
     "gatsby-plugin-image",
+    `gatsby-plugin-netlify`,
+    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-vanilla-extract",
     {
