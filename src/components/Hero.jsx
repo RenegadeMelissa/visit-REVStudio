@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { useId, useRef, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { PhoneIcon } from '@heroicons/react/24/outline'
 
@@ -20,8 +19,8 @@ export function Hero() {
             className="relative shadow-sm -z-50"
             src="../images/hero-infinity.jpg"
             alt="App screenshot"
-            width={2432}
-            height={1442}
+            width={2500}
+            height={1300}
           />
         </div>
       </div>
