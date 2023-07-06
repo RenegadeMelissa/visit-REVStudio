@@ -97,9 +97,10 @@ export default  function ScheduleForm() {
             </div>
 
           <Button type="submit" color="cyan" className="mt-8 py-4 w-full" disabled={state.submitting}>
-            Book REV Studio Today
+            Request studio booking
           </Button>
         </form>
+        <p className="mt-6 text-sm leading-6 text-gray-400">By submitting your information you are consenting to receive communications from REV Studio.</p>
       </AuthLayout>
     </>
   )

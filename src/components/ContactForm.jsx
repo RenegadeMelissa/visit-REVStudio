@@ -1,4 +1,4 @@
-import React, { Fragment,  useId, useRef, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 import { Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/outline'
@@ -71,7 +71,7 @@ export function ContactForm() {
             <form onSubmit={handleSubmit}>
             <div className="space-y-12">
                 <div className="border-b border-white/10 pb-12">
-                <h2 className="text-base font-semibold leading-7 text-white">Let's Chat</h2>
+                <h2 className="text-base py-2 font-semibold leading-7 text-white">Let's Chat</h2>
                 <p className="mt-1 text-sm leading-6 text-gray-400">If you'd like to discuss REV Studio services and rates, please reach out below.</p>
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -192,6 +192,7 @@ export function ContactForm() {
                     </div>
 
             </div> 
+            <p className="text-sm leading-6 text-gray-400">By submitting your information you are consenting to receive <br /> communications from REV Studio.</p>
             </div>  
         </form>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import { StarIcon } from '@heroicons/react/20/solid'
 
 import { Container } from './Container'
@@ -28,10 +28,10 @@ const testimonials = [
   [
     {
       content:
-        "Very nice boutique studio in the heart of the La Jolla Village. Did all my product shoots there and they turned out fantastic. It’s a creative lab equipped with the latest in lighting and cameras.  This place has everything!",
+        "I love working with the Rev Studio team! They are professional and always roll up their sleeves to make sure all needs are met! I highly recommend this versatile studio space for all of your media needs!",
       author: {
-        name: 'Mark Strube',
-        role: 'Founder of Strube Sailing',
+        name: 'Leilani Macedo',
+        role: 'Founder/President CLICS',
         image: '../images/avatars/avatar-3.png',
       },
     },

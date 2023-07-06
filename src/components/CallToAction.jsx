@@ -17,9 +17,9 @@ export function CallToAction() {
           Have questions about the studio or equipment?
           </h2>
           <p className="mt-4 text-lg text-gray-300">
-            REV Studio is the perfect photo video studio to help bring your next idea to life. Add your email to recieve more information. 
+            REV Studio is the perfect photo and video studio to help bring your next idea to life. Add your email to recieve more information. 
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-4 flex justify-center">
           <form className="mx-auto mt-10 flex max-w-md gap-x-4">
             <label htmlFor="email-address" className="sr-only">
               Email address
@@ -41,6 +41,7 @@ export function CallToAction() {
             </button>
           </form>
           </div>
+          <p className="mt-4 text-sm leading-6 text-gray-400">By submitting your email you are consenting to receive email <br /> communications  from REV Studio.</p>
         </div>
       </Container>
     </section>
