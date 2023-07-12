@@ -9,7 +9,18 @@ import { DateField, TextField } from '../components/Fields'
 export default  function ScheduleForm() {
   const [state, handleSubmit] = useForm("xzblpwpn");
   if (state.succeeded) {
-      return <p>Thanks for contacting us! A member of the REV Studio team will be in touch shortly.</p>
+      return (
+        <AuthLayout
+        title="Let’s Chat"
+        subtitle={
+          <>
+            We're looking forward to working with you.
+          </>
+        }
+      >
+        <p>Thanks for contacting us! A member of the REV Studio team will be in touch shortly.</p>
+        </AuthLayout>
+      )
   }
   return (
     <>

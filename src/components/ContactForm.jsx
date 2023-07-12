@@ -77,7 +77,7 @@ export function ContactForm() {
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <div className="sm:col-span-3">
                     <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-white">
-                        First name
+                        First name*
                     </label>
                     <div className="mt-2">
                         <input
@@ -85,6 +85,7 @@ export function ContactForm() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
+                        required
                         className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                         />
                         <ValidationError 
@@ -97,7 +98,7 @@ export function ContactForm() {
 
                     <div className="sm:col-span-3">
                     <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-white">
-                        Last name
+                        Last name*
                     </label>
                     <div className="mt-2">
                         <input
@@ -105,6 +106,7 @@ export function ContactForm() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
+                        required
                         className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                         />
                         <ValidationError 
@@ -117,7 +119,7 @@ export function ContactForm() {
 
                     <div className="col-span-full">
                     <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
-                        Email address
+                        Email address*
                     </label>
                     <div className="mt-2">
                         <input
@@ -125,6 +127,7 @@ export function ContactForm() {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        required
                         className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                         placeholder="your@email.com"
                         aria-invalid="true"
@@ -140,7 +143,7 @@ export function ContactForm() {
 
                     <div className="col-span-full">
                     <label htmlFor="phone-number" className="block text-sm font-medium leading-6 text-white">
-                     Phone number
+                     Phone number*
                     </label>
                     <div className="mt-2">
                         <input
@@ -148,6 +151,7 @@ export function ContactForm() {
                         name="phone-number"
                         type="text"
                         autoComplete="phone"
+                        required
                         className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                         placeholder="(858) 987-6543"
                         />

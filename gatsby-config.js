@@ -40,6 +40,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
       resolve: `gatsby-plugin-segment-js`,
       options: {
         prodKey: 'SEGMENT_PRODUCTION_WRITE_KEY',
