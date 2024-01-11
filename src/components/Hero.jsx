@@ -16,8 +16,8 @@ export function Hero() {
       <div className="flow-root">
         <div>
         <StaticImage
-            className="relative shadow-sm -z-50"
-            src="../images/hero-infinity.jpg"
+            className="relative object-contain shadow-sm -z-50"
+            src="../images/hero-lajolla.jpg"
             alt="App screenshot"
             width={2500}
             height={1300}
@@ -27,10 +27,9 @@ export function Hero() {
       <Container>
       <div className="px-6 pb-4 lg:flex mt-0 lg:-mt-16 lg:items-center lg:gap-x-10 lg:px-8 xl:-mt-20">
           <div className="mx-auto max-w-2xl mt-12 lg:mt-20 lg:mx-0 lg:flex-auto">
-            <div className="flex">
-
-
-               <div className="relative isolate flex-row items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 rounded sm:px-3.5 sm:before:flex-1">
+            <div className="p-8">
+            <dl className="grid grid-cols-1 gap-0.5 overflow-hidden rounded text-center">
+              <div className="relative isolate flex-row items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 rounded sm:px-3.5 sm:before:flex-1">
                 <div
                   className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
                   aria-hidden="true"
@@ -55,37 +54,35 @@ export function Hero() {
                     }}
                   />
                 </div>
-                <p className="text-sm leading-6 text-gray-900">
-                    <strong className="font-semibold">Call for availability.</strong>
-                </p>
                   <Link
                     href="tel:+1844-652-4400"
-                    className="relative flex gap-3 -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
+                    className="relative flex gap-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
                   >
                     <dt className="flex-none">
                       <span className="sr-only">Telephone number</span>
-                      <PhoneIcon className="h-7 w-6 text-rev-500" aria-hidden="true" />
+                      <PhoneIcon className="mt-2 h-8 w-8 text-rev-500" aria-hidden="true" />
                     </dt>
-                    <dd className='mt-1'>
-                        844.652.4400
+                    <dd className="mt-1 text-3xl font-semibold tracking-tight text-gray-900">
+                        (844) 652-4400
                     </dd>
                 </Link>
+                <p className="text-sm leading-6 text-gray-900">
+                    <strong className="font-semibold">Call for availability</strong>
+                </p>
                 <div className="flex flex-1 justify-end">
                 </div>
               </div>
-
-
-
+              </dl>
             </div>
             <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Your Blank Canvas Awaits
+             Now Booking Winter Productions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Unleash your creativity at the ultimate production hub in La Jolla. State-of-the-art facilities, expert team, limitless possibilities. REV Studio is one of San Diego’s premium studios for all things production. In the heart of La Jolla Village and blocks from the ocean, REV Studio is a photo and video studio available to you to fulfill your marketing and production needs.
+              Click your heels then plan your fall and winter productions just north of San Diego in La Jolla, California. Unleash your creativity at the ultimate production hub in La Jolla. State-of-the-art facilities, expert team, limitless possibilities. REV Studio is one of San Diego’s premium studios for all things production. In the heart of La Jolla Village and blocks from the ocean, REV Studio is a photo and video studio available to you to fulfill your marketing and production needs.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a href="/Schedule" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+                Click your heels <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

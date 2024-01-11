@@ -61,7 +61,7 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-4">
           <div className="relative z-10 flex items-center gap-12">
             <Link href="/" aria-label="Home">
-              <FullLogo className="block h-8 w-auto" />
+              <FullLogo className="block h-7 w-auto" />
             </Link>
             <div className="hidden lg:flex lg:gap-10">
               <NavLinks />
@@ -78,7 +78,7 @@ export function Header() {
                 >
                   <dt className="flex-none">
                     <span className="sr-only">Telephone number</span>
-                    <PhoneIcon className="h-7 w-6 text-rev-500" aria-hidden="true" />
+                    <PhoneIcon className="h-7 w-6 text-rev-500 sm:w-5" aria-hidden="true" />
                   </dt>
                   <dd className='mt-1'>
                       844.652.4400
@@ -86,68 +86,8 @@ export function Header() {
                 </Link>
               </div>
             </div>
-            <Popover className="lg:hidden">
-              {({ open }) => (
-                <>
-                  <Popover.Button
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 [&:not(:focus-visible)]:focus:outline-none"
-                    aria-label="Toggle site navigation"
-                  >
-                    {({ open }) =>
-                      open ? (
-                        <ChevronUpIcon className="h-6 w-6" />
-                      ) : (
-                        <MenuIcon className="h-6 w-6" />
-                      )
-                    }
-                  </Popover.Button>
-                  <AnimatePresence initial={false}>
-                    {open && (
-                      <>
-                        <Popover.Overlay
-                          static
-                          as={motion.div}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          className="fixed inset-0 z-0 bg-gray-300/60 backdrop-blur"
-                        />
-                        <Popover.Panel
-                          static
-                          as={motion.div}
-                          initial={{ opacity: 0, y: -32 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{
-                            opacity: 0,
-                            y: -32,
-                            transition: { duration: 0.2 },
-                          }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
-                        >
-                          <div className="space-y-4">
-                            <MobileNavLink href="#features">
-                              Features
-                            </MobileNavLink>
-                            <MobileNavLink href="#reviews">
-                              Reviews
-                            </MobileNavLink>
-                            <MobileNavLink href="#pricing">
-                              Pricing
-                            </MobileNavLink>
-                            <MobileNavLink href="#faqs">FAQs</MobileNavLink>
-                          </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                            <Button href="/Schedule">Book studio time</Button>
-                          </div>
-                        </Popover.Panel>
-                      </>
-                    )}
-                  </AnimatePresence>
-                </>
-              )}
-            </Popover>
-            <Button href="/Schedule" className="hidden lg:block" color="rev">
-              Book studio
+            <Button href="/Schedule" className="block" color="rev">
+              Schedule Studio
             </Button>
           </div>
         </Container>
